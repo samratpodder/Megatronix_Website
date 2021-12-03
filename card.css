@@ -1,0 +1,73 @@
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: 'Source Code Pro', monospace;
+    padding: 50px;
+    max-width: 100%;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(250px,100%), 1fr));
+    grid-gap: 2%;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.card{
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 1px; */
+}
+.card-image{
+    /* width: 50px; */
+    /* max-width: 20%; */
+    align-items: center;
+    justify-self: center;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 20%;
+}
+.card-image img{
+    /* width: 100%; */
+    max-width: 100%;
+}
+.socials{
+    display:block;
+}
+.social{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.social li a{
+    text-decoration: none;
+}
+.social li{
+   /* padding-left: 25%; */
+   padding-right: 50%;
+}
+.social :hover li>a{
+    border-radius: 20%;
+    border-color: #000;
+    border: rgb(89, 230, 8) solid 1px;
+}
+.fa-facebook{
+    color: #3b5998;
+}
+.fa-twitter{
+    color: #00aced;
+}
+.fa-instagram{
+    color: #e1306c;
+}
+.fa-linkedin{
+    color: #0077b5;
+}
