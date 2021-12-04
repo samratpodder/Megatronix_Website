@@ -1,27 +1,27 @@
 var data = {
     pictures:[
         {
-            src:"images\\sdsdsdsd  - Beautiful Naaam.jpeg",
+            src:"/media/members/sdsdsdsd  - Beautiful Naaam.jpeg",
             socials:[{}]
         },
         {
-            src:"images\\sdsdsdsd  - Beautiful Name.jpeg",
+            src:"/media/members/sdsdsdsd  - Beautiful Name.jpeg",
             socials:[{}]
         },
         {
-            src:"images\\sdsdsdsd  - ExtremelyLong NameThisIs.jpeg",
+            src:"/media/members/sdsdsdsd  - ExtremelyLong NameThisIs.jpeg",
             socials:[{}]
         },
         {
-            src:"images\\sdsdsdsd  - Sundor Name.jpeg",
+            src:"/media/members/sdsdsdsd  - Sundor Name.jpeg",
             socials:[{}]
         },
         {
-            src:"images\\sdsdsdsd  - Sundor Name.jpeg",
+            src:"/media/members/sdsdsdsd  - Sundor Name.jpeg",
             socials:[{}]
         },
         {
-            src:"images\\sdsdsdsd  - Sundor Name.jpeg",
+            src:"/media/members/sdsdsdsd  - Sundor Name.jpeg",
             socials:[{}]
         }
     ],
