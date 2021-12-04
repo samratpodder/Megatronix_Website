@@ -21,12 +21,6 @@ body{
     justify-content: center;
     /* padding: 1px; */
 }
-.card-image{
-    /* width: 50px; */
-    /* max-width: 20%; */
-    align-items: center;
-    justify-self: center;
-}
 .card-content{
     display: flex;
     flex-direction: column;
