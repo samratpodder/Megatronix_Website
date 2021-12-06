@@ -90,7 +90,7 @@ var apiData;
 
 
 var megatronlist=[];
-makeGetRequest("http://localhost:3000/api/v1/getDir");
+makeGetRequest("http://192.168.0.108:3000/api/v1/getDir");
 setTimeout(() => {
 
 
@@ -110,11 +110,12 @@ setTimeout(() => {
         Mainname = Mainname.slice(2,Mainname.lastIndexOf("."));
         const card = document.createElement("div");
         card.classList = "card";
-        const imgSrc = element.picSrc.slice(element.picSrc.indexOf("media"));
+        var imgSrc = element.picSrc.slice(element.picSrc.indexOf("media"));
+        imgSrc = "../"+imgSrc
         console.log(imgSrc);
         const megatron = '\
         <div class="card-image">\
-            <img src="'+element.picSrc+'" alt="">\
+            <img src="'+imgSrc+'" alt="">\
         </div>\
         <div class="card-content">\
             <h3 class="name">'+Mainname+'</h3>\
