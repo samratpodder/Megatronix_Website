@@ -63,14 +63,14 @@ body{
     border: rgb(89, 230, 8) solid 1px;
 }
 .fa-facebook{
-    color: #3b5998;
+    color: #2051bb;
 }
-.fa-twitter{
-    color: #00aced;
-}
-.fa-instagram{
-    color: #e1306c;
+.fa-github{
+    color: #000;
 }
 .fa-linkedin{
     color: #0077b5;
+}
+.fa-envelope{
+    color: #383838;
 }

@@ -2,14 +2,34 @@
 
 
 class Megatron {
-    constructor(picSrc){
+    constructor(membername,facebook,github,
+        email,linkedin,picSrc,specialText){
         this.picSrc = picSrc;
+        this.membername = membername;
+        this.facebook = facebook;
+        this.github = github;
+        this.email = email;
+        this.linkedin = linkedin;
+        this.specialText = specialText;
     }
     getName(){
-        const namewithExt = this.picSrc.substring(element.src.lastIndexOf("-"));
-        const name = namewithExt.slice(2,namewithExt.lastIndexOf("."));
+        // const namewithExt = this.picSrc.substring(element.src.lastIndexOf("-"));
+        // const name = namewithExt.slice(2,namewithExt.lastIndexOf("."));
         
-        return name;
+        return this.membername;
+    }
+    getPicSrc(){
+        const offset = 4;
+        const idLength = 33;//Google Drive File ID 2019 Standards
+        const id = this.picSrc.slice(this.picSrc.indexOf("&id=")+offset,this.picSrc.indexOf("&id=")+offset+idLength);
+        const src = "https://drive.google.com/uc?export=view&id="+id;
+        return src;
+    }
+    getSocialMedia(){
+        return {github:this.github,linkedin:this.linkedin,facebook:this.facebook,email:"mailto:"+this.email};
+    }
+    getSpecialText(){
+        return this.specialText;
     }
 }
 
@@ -101,38 +121,41 @@ setTimeout(() => {
 
     for (let i = 0; i < apiData.length; i++) {
         const element = apiData[i];
-        megatronlist.push(new Megatron(element));
+        megatronlist.push(new Megatron(element.Name,
+            element.Facebook,element.Github,element.Email_ID,element.LinkedIn,
+            element.Image,element.SpecialText
+        ));
+
     }
 
     for (let index = 0; index < megatronlist.length; index++) {
         const element = megatronlist[ index ];
-        var Mainname = element.picSrc.substring(element.picSrc.lastIndexOf("-"));
-        Mainname = Mainname.slice(2,Mainname.lastIndexOf("."));
+        const Mainname = element.getName();
+        const imgSrc = element.getPicSrc();
+        const socials = element.getSocialMedia();
+        const specialText = element.getSpecialText();
+        // if()
         const card = document.createElement("div");
         card.classList = "card";
-        var imgSrc = element.picSrc.slice(element.picSrc.indexOf("media"));
-        imgSrc = "../"+imgSrc
-        console.log(imgSrc);
         const megatron = '\
         <div class="card-image">\
             <img src="'+imgSrc+'" alt="">\
         </div>\
         <div class="card-content">\
             <h3 class="name">'+Mainname+'</h3>\
-            <h4> <i> Lorem ipsum dolor sit</i> </h4>\
+            <h4> <i> '+specialText+'</i> </h4>\
             <div class="socials">\
                 <ul class="social">\
-                    <li><a href="#" class="fa fa-facebook"></a></li>\
-                    <li><a href="#" class="fa fa-twitter"></a></li>\
-                    <li><a href="#" class="fa fa-instagram"></a></li>\
-                    <li><a href="#" class="fa fa-linkedin"></a></li>\
+                    <li><a href="'+socials.facebook+'" class="fa fa-facebook"></a></li>\
+                    <li><a href="'+socials.github+'" class="fa fa-github"></a></li>\
+                    <li><a href="'+socials.linkedin+'" class="fa fa-linkedin "></a></li>\
+                    <li><a href="'+socials.email+'" class="fa fa-envelope"></a></li>\
                 </ul>\
             </div>\
         </div>\
         ';
         card.innerHTML += megatron;
         document.querySelector(".cards").appendChild(card);
-    // console.log(Mainname);
     }
 
 
