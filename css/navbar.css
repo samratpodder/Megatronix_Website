@@ -11,14 +11,16 @@ body{
     margin-left: 0px;
     margin-right: 0px;
     padding: 0;
+    background-color: #202020;
+    height: 100vh;
 }
 .container{
     height: 90vh;
     width: 100%;
 }
 .logo{
-    height: 50%;
-    width: 50%;
+    height:60%;
+    width: 60%;
     margin: 0 0;
 }
 .navbar{
@@ -39,4 +41,7 @@ body{
     color: azure;
     font-size: 1.5rem;
     font-family: Gilroy-Light;
+}
+.container-logo{
+    padding-left: 5rem;
 }

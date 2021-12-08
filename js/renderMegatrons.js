@@ -142,8 +142,8 @@ setTimeout(() => {
             <img src="'+imgSrc+'" alt="">\
         </div>\
         <div class="card-content">\
-            <h3 class="name">'+Mainname+'</h3>\
-            <h4> <i> '+specialText+'</i> </h4>\
+            <h5 class="name">'+Mainname+'</h5>\
+            <h4>  '+specialText+' </h4>\
             <div class="socials">\
                 <ul class="social">\
                     <li><a href="'+socials.facebook+'" class="fa fa-facebook"></a></li>\
