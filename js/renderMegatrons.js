@@ -3,7 +3,7 @@
 
 class Megatron {
     constructor(membername,facebook,github,
-        email,linkedin,picSrc,specialText){
+        email,linkedin,picSrc,phoneNo,specialText){
         this.picSrc = picSrc;
         this.membername = membername;
         this.facebook = facebook;
@@ -11,6 +11,7 @@ class Megatron {
         this.email = email;
         this.linkedin = linkedin;
         this.specialText = specialText;
+        this.phoneNo = phoneNo;
     }
     getName(){
         // const namewithExt = this.picSrc.substring(element.src.lastIndexOf("-"));
@@ -30,6 +31,9 @@ class Megatron {
     }
     getSpecialText(){
         return this.specialText;
+    }
+    getSocialSM(){
+        return {email:this.email,ph:"tel:"+this.phoneNo};
     }
 }
 
@@ -123,7 +127,7 @@ setTimeout(() => {
         const element = apiData[i];
         megatronlist.push(new Megatron(element.Name,
             element.Facebook,element.Github,element.Email_ID,element.LinkedIn,
-            element.Image,element.SpecialText
+            element.Image,9876543210,element.SpecialText
         ));
 
     }
@@ -132,7 +136,7 @@ setTimeout(() => {
         const element = megatronlist[ index ];
         const Mainname = element.getName();
         const imgSrc = element.getPicSrc();
-        const socials = element.getSocialMedia();
+        const socials = element.getSocialSM();
         const specialText = element.getSpecialText();
         // if()
         const card = document.createElement("div");
@@ -146,10 +150,8 @@ setTimeout(() => {
             <h4>  '+specialText+' </h4>\
             <div class="socials">\
                 <ul class="social">\
-                    <li><a href="'+socials.facebook+'" class="fa fa-facebook"></a></li>\
-                    <li><a href="'+socials.github+'" class="fa fa-github"></a></li>\
-                    <li><a href="'+socials.linkedin+'" class="fa fa-linkedin "></a></li>\
-                    <li><a href="'+socials.email+'" class="fa fa-envelope"></a></li>\
+                    <li><a href="'+socials.email+'" class="fa fa-envelope "></a></li>\
+                    <li><a href="'+socials.ph+'" class="fa fa-phone"></a></li>\
                 </ul>\
             </div>\
         </div>\
