@@ -138,3 +138,100 @@ body{
 .name{
     font-family: Gilroy-ExtraBold;
 }
+@media (max-width:1100px)
+{
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(25%,100%), 1fr));
+        grid-gap: 5%;
+        margin: auto;
+        max-width: 80%;
+        margin-top: 10%;
+    }
+    .name{
+        font-size: 1.5rem;
+        letter-spacing: 0.15rem;
+    }
+    .fa { transform: scale(1.2,1.2); }
+    .spltxt{
+        margin-top: 0.9rem;
+    }
+}
+@media (max-width:768px)
+{
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(40%,100%), 1fr));
+        grid-gap: 10%;
+        margin: auto;
+        max-width: 80%;
+        margin-top: 10%;
+    }
+    .name{
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+    }
+    .fa { transform: scale(1.5,1.5); }
+    .spltxt{
+        margin-top: 0.9rem;
+    }
+    .card{
+        margin-bottom: 5%;
+    }
+}
+@media (max-width:512px)
+{
+    /* .cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(48%,100%), 1fr));
+        grid-gap: 10%;
+        margin: auto;
+        max-width: 80%;
+        margin-top: 10%;
+    }
+    .name{
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+    }
+    .fa { transform: scale(1.5,1.5); }
+    .spltxt{
+        margin-top: 0.9rem;
+    }
+    .card{
+        margin-bottom: 0%;
+    } */
+    .cards{
+        grid-gap: 3%;
+    }
+    .card{
+        max-height: 400px;
+        height:250px;
+        transition: width 1s, height 1s;
+    }
+    .card-image img{
+        max-width : auto;
+        width: 15rem;
+    }
+    .name{
+        font-size: 1rem;
+    }
+    .social a{
+        transform: scale(1.5,1.5);
+        display: none;
+
+        transition: all 1s ease-out;
+    }
+    .spltxt{
+        margin-top: 1%;
+        display: none;
+    }
+    .card:hover{
+        height: 350px;
+    }
+    .card:hover .card-image img{
+        transform: none;
+    }
+    .card:hover .social a, .card:hover .spltxt{
+        display: block;
+    }
+}

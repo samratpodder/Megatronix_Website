@@ -33,7 +33,7 @@ class Megatron {
         return this.specialText;
     }
     getSocialSM(){
-        return {email:this.email,ph:"tel:"+this.phoneNo};
+        return {email:"mailto:"+this.email,ph:"tel:"+this.phoneNo};
     }
 }
 
@@ -147,7 +147,7 @@ setTimeout(() => {
         </div>\
         <div class="card-content">\
             <h5 class="name">'+Mainname+'</h5>\
-            <h4>  '+specialText+' </h4>\
+            <h4 class="spltxt">  '+specialText+' </h4>\
             <div class="socials">\
                 <ul class="social">\
                     <li><a href="'+socials.email+'" class="fa fa-envelope "></a></li>\
