@@ -48,6 +48,14 @@ body{
 .container-logo{
     padding-left: 5rem;
 }
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(20%,100%), 1fr));
@@ -68,6 +76,7 @@ body{
     /* padding: 1px; */
     box-shadow: 0px 5px 10px #000;
     margin-bottom: 12%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 .card-content{
     display: flex;
@@ -205,8 +214,8 @@ body{
     }
     .card{
         max-height: 400px;
-        height:250px;
-        transition: width 1s, height 1s;
+        height:300px;
+        transition: width 0.5s, height 0.5s;
     }
     .card-image img{
         max-width : auto;
@@ -217,13 +226,15 @@ body{
     }
     .social a{
         transform: scale(1.5,1.5);
-        display: none;
-
-        transition: all 1s ease-out;
+        /* display: none; */
+        opacity: 0;
+        transition: all 0.7s ease-in-out;
     }
     .spltxt{
         margin-top: 1%;
-        display: none;
+        /* display: none; */
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
     }
     .card:hover{
         height: 350px;
@@ -232,6 +243,8 @@ body{
         transform: none;
     }
     .card:hover .social a, .card:hover .spltxt{
-        display: block;
+        /* display: block; */
+
+        opacity: 1;
     }
 }
