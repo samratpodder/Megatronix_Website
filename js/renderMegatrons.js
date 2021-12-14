@@ -3,15 +3,17 @@
 
 class Megatron {
     constructor(membername,facebook,github,
-        email,linkedin,picSrc,phoneNo,specialText){
+        email,linkedin,picSrc,phoneNo,dept,year){
         this.picSrc = picSrc;
         this.membername = membername;
         this.facebook = facebook;
         this.github = github;
         this.email = email;
         this.linkedin = linkedin;
-        this.specialText = specialText;
+        this.dept = dept;
+        this.year = parseInt(year.charAt(0));
         this.phoneNo = phoneNo;
+
     }
     getName(){
         // const namewithExt = this.picSrc.substring(element.src.lastIndexOf("-"));
@@ -29,15 +31,21 @@ class Megatron {
     getSocialMedia(){
         return {github:this.github,linkedin:this.linkedin,facebook:this.facebook,email:"mailto:"+this.email};
     }
-    getSpecialText(){
-        return this.specialText;
+    getDept(){
+        return this.dept;
     }
     getSocialSM(){
-        return {email:"mailto:"+this.email,ph:"tel:"+this.phoneNo};
+        return {email:"mailto:"+this.email,ph:"tel:+91"+this.phoneNo};
     }
 }
 
-
+var sortbyYear = (a, b) => {
+    if (a.year < b.year)
+        return 1;
+    if (a.year > b.year)
+        return -1;
+    return 0;
+}
 
 
 
@@ -114,7 +122,7 @@ var apiData;
 
 
 var megatronlist=[];
-makeGetRequest("http://192.168.0.108:3000/api/v1/getDir");
+makeGetRequest("http://192.168.0.101:3000/api/v1/getDir");
 setTimeout(() => {
 
 
@@ -126,18 +134,18 @@ setTimeout(() => {
     for (let i = 0; i < apiData.length; i++) {
         const element = apiData[i];
         megatronlist.push(new Megatron(element.Name,
-            element.Facebook,element.Github,element.Email_ID,element.LinkedIn,
-            element.Image,9876543210,element.SpecialText
+            element.Facebook_url,element.Github_url,element.Email_ID,element.LinkedIn_url,
+            element.Image,element.Phone_Number,element.Department,element.Year
         ));
 
     }
-
+    megatronlist.sort(sortbyYear);
     for (let index = 0; index < megatronlist.length; index++) {
         const element = megatronlist[ index ];
         const Mainname = element.getName();
         const imgSrc = element.getPicSrc();
         const socials = element.getSocialSM();
-        const specialText = element.getSpecialText();
+        const specialText = element.getDept();
         // if()
         const card = document.createElement("div");
         card.classList = "card";
