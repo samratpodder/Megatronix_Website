@@ -5,14 +5,38 @@ class Megatron {
     constructor(membername,facebook,github,
         email,linkedin,picSrc,phoneNo,dept,year){
         this.picSrc = picSrc;
-        this.membername = membername;
-        this.facebook = facebook;
-        this.github = github;
+
+
+        let names = membername.split(" ");
+        this.membername = "";
+        for (let index = 0; index < names.length; index++) {
+            names[index] = names[index].toLowerCase();
+            this.membername+=names[index].charAt(0).toUpperCase()+names[index].slice(1)+" ";
+        }
+
+        if(facebook != undefined && facebook.includes("www.facebook.com/")){
+            this.facebook = facebook;
+        }
+        else{
+            this.facebook = "https://www.facebook.com/";
+        }
+        if(github.includes("github.com/")){
+            this.github = github;
+        }
+        else{
+            this.github = "https://github.com/";
+        }
         this.email = email;
-        this.linkedin = linkedin;
+        if(linkedin!= undefined && linkedin.includes("www.linkedin.com/in/")){
+            this.linkedin = linkedin;
+        }
+        else{
+            this.linkedin = "https://www.linkedin.com/in/";
+        }
         this.dept = dept;
         this.year = parseInt(year.charAt(0));
-        this.phoneNo = phoneNo;
+
+        this.phoneNo = phoneNo.slice(phoneNo.length-10);
 
     }
     getName(){
@@ -24,7 +48,7 @@ class Megatron {
     getPicSrc(){
         const offset = 4;
         const idLength = 33;//Google Drive File ID 2019 Standards
-        const id = this.picSrc.slice(this.picSrc.indexOf("&id=")+offset,this.picSrc.indexOf("&id=")+offset+idLength);
+        const id = this.picSrc.slice(this.picSrc.lastIndexOf("&id=")+offset,this.picSrc.lastIndexOf("&id=")+offset+idLength);
         const src = "https://drive.google.com/uc?export=view&id="+id;
         return src;
     }

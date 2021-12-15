@@ -96,6 +96,7 @@ body{
     align-items: center;
     line-height: 20%;
     margin-top: 1.2rem;
+    padding: 0% 10%;
 }
 .card-image{
     align-items: center;
@@ -177,6 +178,9 @@ body{
     .spltxt{
         margin-top: 0.9rem;
     }
+    .card-content{
+        padding: 0px 9%;
+    }
 }
 @media (max-width:768px)
 {
@@ -198,6 +202,9 @@ body{
     }
     .card{
         margin-bottom: 5%;
+    }
+    .card-content{
+        padding: 0px 8%;
     }
 }
 @media (max-width:512px)
@@ -231,7 +238,8 @@ body{
     }
     .card-image img{
         max-width : auto;
-        width: 15rem;
+        width: 8rem;
+        height: 190px;
     }
     .name{
         font-size: 1rem;
@@ -263,7 +271,7 @@ body{
 @media (max-width:375px)
 {
     .cards{
-        grid-gap: 2%;
+        grid-gap: 1% 5%;
     }
     .card{
         width: 100%;
@@ -274,5 +282,8 @@ body{
     }
     .name{
         font-size: 0.8rem;
+    }
+    .card-content{
+        padding: 0px 9%;
     }
 }
