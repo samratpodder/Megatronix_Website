@@ -146,7 +146,7 @@ var apiData;
 
 
 var megatronlist=[];
-makeGetRequest("http://192.168.0.101:3000/api/v1/getDir");
+makeGetRequest("https://teamspageapi.azurewebsites.net/api/v1/getDir");
 setTimeout(() => {
 
 
@@ -194,4 +194,4 @@ setTimeout(() => {
 
 
 
-},200);
+},500);
