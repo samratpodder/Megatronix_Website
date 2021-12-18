@@ -70,7 +70,13 @@ var sortbyYear = (a, b) => {
         return -1;
     return 0;
 }
-
+var sortbyName = (a,b) => {
+    if(a.membername<b.membername)
+        return -1;
+    if(a.membername>b.membername)
+        return 1;
+    return 0;
+}
 
 
 var apiData;
@@ -163,7 +169,10 @@ setTimeout(() => {
         ));
 
     }
+    
+    megatronlist.sort(sortbyName);
     megatronlist.sort(sortbyYear);
+
     for (let index = 0; index < megatronlist.length; index++) {
         const element = megatronlist[ index ];
         const Mainname = element.getName();
@@ -194,4 +203,4 @@ setTimeout(() => {
 
 
 
-},500);
+},200);
