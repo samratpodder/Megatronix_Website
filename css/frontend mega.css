@@ -16,14 +16,10 @@
 {
         color: cornsilk;
 }
-body
-{
-    background-image: url("paper.gif");
-    background-color:rgb(0, 0, 0);
-    
-}
-.h11
-{
+
+
+
+.h11{
         font-family:fantasy;
         color: cornsilk;
         word-spacing: 6px;
@@ -31,21 +27,19 @@ body
         animation: text 3s 1;
         font-size: large; 
         font-weight: 700;
-        
-
+        box-shadow: 4px 4x 8px White;
 
 }
-.h22
-{
-        font-family:cursive;
+
+.h22{
+        font-family: cursive;
         color: cornsilk;
         word-spacing: 3px;
         letter-spacing: 2px;
         animation: text2 2s 1;
-        
-
 
 }
+
 @keyframes text {
         0%{
                 color: cornsilk;
@@ -58,7 +52,9 @@ body
         
        
         
-}@keyframes text2 {
+}
+
+@keyframes text2 {
         0%{
                 color: cornsilk;
                 margin-bottom: -40px;
