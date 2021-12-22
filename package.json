@@ -1,0 +1,28 @@
+{
+  "name": "megatronix_website",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "no",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "express": "^4.17.1",
+    "axios": "^0.24.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "no"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samratpodder/Megatronix_Website.git"
+  },
+  "keywords": [
+    "samrat"
+  ],
+  "author": "samrat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samratpodder/Megatronix_Website/issues"
+  },
+  "homepage": "https://github.com/samratpodder/Megatronix_Website#readme"
+}
