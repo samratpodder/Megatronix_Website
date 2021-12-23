@@ -12,11 +12,11 @@ body{
     margin-right: 0px;
     padding: 0;
     background-color: #202020;
-    height: 100vh;
 }
 .container{
-    height: 90vh;
-    width: 100%;
+    max-width: 100%;
+    font-family: Gilroy-Light;
+    box-sizing: border-box;
 }
 .logo{
     height:60%;

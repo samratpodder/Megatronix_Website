@@ -1,0 +1,43 @@
+@font-face {
+    font-family: Gilroy-ExtraBold;
+    src: url("../media/fonts/Gilroy-ExtraBold.otf");
+}
+.hero-section{
+    display:flex;
+    flex-direction:row;
+    width: 100%;
+    justify-content: space-around;
+}
+.hero-right
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1;
+}
+.hero-left
+{
+    font-family: Gilroy-ExtraBold;
+    color: aliceblue;
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+.mid{
+    z-index: 5;
+}
+.top,.end{
+    color: #797777;
+    z-index: -1;
+}
+.toper, .ender{
+    color: #3c3b3b;
+    z-index: -1;
+}
+.hero-right>img{
+    width:210%;
+    height:100%;
+}
