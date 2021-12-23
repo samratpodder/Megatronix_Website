@@ -7,6 +7,8 @@
     flex-direction:row;
     width: 100%;
     justify-content: space-around;
+    letter-spacing: 1rem;
+    height: 100%;
 }
 .hero-right
 {
@@ -40,4 +42,18 @@
 .hero-right>img{
     width:210%;
     height:100%;
+}
+.section-heading>span{
+    font-family: Gilroy-ExtraBold;
+    font-size: 3rem;
+    color: #ffffff;
+    /* letter-spacing: 1rem; */
+    margin-top: 2rem;
+}
+.aboutus, .bodyevents, .sponsors{
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50vh;
 }
