@@ -1,3 +1,16 @@
+const APIpath = "https://teamspageapi.azurewebsites.net/api/v1/isAlive";
+// Wake Up API
+axios.get(APIpath).then(
+  (response)=>{
+    console.log("API is working");
+  },
+  (error) => {
+      console.log(error);
+  }
+);
+
+
+
 class TextScramble {
     constructor(el) {
       this.el = el;

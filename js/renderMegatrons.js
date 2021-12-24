@@ -80,7 +80,7 @@ var sortbyName = (a,b) => {
 
 
 var apiData;
- function makeGetRequest(path) {
+const makeGetRequest = (path)=> {
     axios.get(path).then(
         async (response) => {
             apiData = await response.data;
@@ -203,4 +203,4 @@ setTimeout(() => {
 
 
 
-},200);
+},500);
