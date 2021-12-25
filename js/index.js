@@ -78,7 +78,7 @@ const next = () => {
 
 const aboutUs = document.querySelector("#aboutUs > .heading > span");
 const events = document.querySelector("#events > .heading > span");
-// const contact = document.querySelector("#contact > .heading > span");
+const gallery = document.querySelector("#gallery > .heading > span");
 // const videos = document.querySelector("#videos > .heading > span");
 // const speakers = document.querySelector("#speakers > .heading > span");
 // const workshops = document.querySelector("#workshops > .heading > span");
@@ -87,7 +87,7 @@ const events = document.querySelector("#events > .heading > span");
 
 let isAboutUsAnimated = false;
 let isEventsAnimated = false;
-// let isContactAnimated = false;
+let isGalleryAnimated = false;
 // let isVideoAnimated = false;
 // let isSpeakersAnimated = false;
 // let isWorkshopsAnimated = false;
@@ -149,13 +149,13 @@ window.addEventListener(
           next();
         }
       }
-    else if (isInViewport(contact)) {
-      setActivePage("contact");
-      if (!isContactAnimated) {
-        phrases = ["Contact Us"];
-        el = contact;
+    else if (isInViewport(gallery)) {
+      setActivePage("gallery");
+      if (!isGalleryAnimated) {
+        phrases = ["Activity Gallery"];
+        el = gallery;
         fx = new TextScramble(el);
-        isContactAnimated = true;
+        isGalleryAnimated = true;
         next();
       }
     } 
@@ -230,13 +230,13 @@ window.addEventListener(
           next();
         }
       }
-    else if (isInViewport(contact)) {
-      setActivePage("contact");
-      if (!isContactAnimated) {
-        phrases = ["Contact Us"];
-        el = contact;
+    else if (isInViewport(gallery)) {
+      setActivePage("gallery");
+      if (!isGalleryAnimated) {
+        phrases = ["Activity Gallery"];
+        el = gallery;
         fx = new TextScramble(el);
-        isContactAnimated = true;
+        isGalleryAnimated = true;
         next();
       }
     }
@@ -277,3 +277,45 @@ window.addEventListener(
   },
   false
 );
+
+
+
+function change() {
+  var img_arr = [
+    "../media/Others/gallery2.jpg",
+    "../media/Others/gallery3.jpg",
+    "../media/Others/gallery4.jpg"
+  ];
+
+  var left = document.getElementById("left-blured-img");
+  var main = document.getElementById("main-img");
+  var right = document.getElementById("right-blured-img");
+  var flag = 0;
+  var index = 0;
+
+  setInterval(() => {
+    flag = 1;
+    if (index < img_arr.length - 2) {
+      left.src = img_arr[index];
+      main.src = img_arr[index + 1];
+      right.src = img_arr[index + 2];
+    } else if (index == img_arr.length - 2) {
+      left.src = img_arr[index];
+      main.src = img_arr[index + 1];
+      right.src = img_arr[0];
+    } else if (index == img_arr.length - 1) {
+      left.src = img_arr[index];
+      main.src = img_arr[0];
+      right.src = img_arr[1];
+    } else if (index == img_arr.length) {
+      index = 0;
+      left.src = img_arr[index];
+      main.src = img_arr[index + 1];
+      right.src = img_arr[index + 2];
+    }
+
+    index++;
+  }, 3000);
+}
+
+change();
