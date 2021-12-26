@@ -280,42 +280,22 @@ window.addEventListener(
 
 
 
-function change() {
-  var img_arr = [
-    "../media/Others/gallery2.jpg",
-    "../media/Others/gallery3.jpg",
-    "../media/Others/gallery4.jpg"
-  ];
+const slideshowImages = document.querySelectorAll(".intro-slideshow img");
 
-  var left = document.getElementById("left-blured-img");
-  var main = document.getElementById("main-img");
-  var right = document.getElementById("right-blured-img");
-  var flag = 0;
-  var index = 0;
+const nextImageDelay = 5000;
+let currentImageCounter = 0; // setting a variable to keep track of the current image (slide)
 
-  setInterval(() => {
-    flag = 1;
-    if (index < img_arr.length - 2) {
-      left.src = img_arr[index];
-      main.src = img_arr[index + 1];
-      right.src = img_arr[index + 2];
-    } else if (index == img_arr.length - 2) {
-      left.src = img_arr[index];
-      main.src = img_arr[index + 1];
-      right.src = img_arr[0];
-    } else if (index == img_arr.length - 1) {
-      left.src = img_arr[index];
-      main.src = img_arr[0];
-      right.src = img_arr[1];
-    } else if (index == img_arr.length) {
-      index = 0;
-      left.src = img_arr[index];
-      main.src = img_arr[index + 1];
-      right.src = img_arr[index + 2];
-    }
+// slideshowImages[currentImageCounter].style.display = "block";
+slideshowImages[currentImageCounter].style.opacity = 1;
 
-    index++;
-  }, 3000);
+setInterval(nextImage, nextImageDelay);
+
+function nextImage() {
+  // slideshowImages[currentImageCounter].style.display = "none";
+  slideshowImages[currentImageCounter].style.opacity = 0;
+
+  currentImageCounter = (currentImageCounter+1) % slideshowImages.length;
+
+  // slideshowImages[currentImageCounter].style.display = "block";
+  slideshowImages[currentImageCounter].style.opacity = 1;
 }
-
-change();

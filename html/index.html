@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="shortcut icon" href="../media/logos/mega_logo.ico" type="image/x-icon">
+    <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Megatronix</title>
 </head>
@@ -106,24 +107,30 @@
                   </div>
             </div>
         </div>
-        <div class="ActGallery" id="gallery">
-            <div class="heading section-heading">
-                <span>Activity Gallery</span>
-            </div>
-            <div class="gWindow">
-                <div class="body-top" id="top">
-                    <div class="bg-poster">
-                      <div class="left-poster">
-                        <img alt="" class="bg-img-properties" id="left-blured-img" />
-                      </div>
-                      <div class="main-poster">
-                        <img alt="" id="main-img" />
-                      </div>
-                      <div class="right-poster">
-                        <img alt="" class="bg-img-properties" id="right-blured-img" />
-                      </div>
+        <div class="gallery" id= "gallery">
+            <div class="heading section-heading"> <span>Activity Gallery</span> </div>
+            <div class="window">
+                <div class="window-top">
+                    <div class="dummybtns">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
                     </div>
-                  </div>
+                    <div class="windowtitle">
+                        <span>Gallery</span>
+                    </div>
+                </div>
+                <hr class="windowbr">
+                <div class="window-main">
+                    <header class="intro">
+                        <div class="intro-slideshow">
+                          <img width="512px" height="512px" src="../media/Others/gallery2.jpg">
+                          <img width="512px" height="512px" src="../media/Others/gallery3.jpg">
+                          <img width="512px" height="512px" src="../media/Others/gallery4.jpg">
+                        </div>
+                      </header>
+                </div>
+
             </div>
         </div>
         <hr class="footerdivider">
