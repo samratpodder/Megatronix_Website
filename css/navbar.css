@@ -45,3 +45,30 @@ body{
 .container-logo{
     padding-left: 5rem;
 }
+.links{
+    transition: all 0.5s ease-in-out;
+}
+.links:hover{
+    transform: translateX(0.5rem);
+    transform: translateY(0.3rem);
+}
+
+
+@media (max-width:1189px){
+    .container-logo{
+        padding-left: 1rem;
+    }
+    .links{
+        padding-right: 0.1rem!important;
+    }
+}
+@media (max-width:1200px){
+    .links{
+        padding-right: 1rem;
+    }
+}
+@media (max-width:1320px){
+    .links{
+        padding-right: 2rem;
+    }
+}
