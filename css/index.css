@@ -441,6 +441,31 @@ footer a:hover{
   .bodytext{
     font-size: 1.1rem;
   }
+  .window{
+    margin: 3% 5%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #events>.heading>span{
+      margin-left: 2rem;
+  }
+  .hero-section{
+    height: 65vh;
+  }
+  .window{
+    margin: 3% 3%;
+  }
+  .footcontainer{
+    grid-template-areas:
+    'footlogo left'
+    'middle right'
+    ;
+  }
+  #contacthead {
+    font-size: 3rem;
+}
+
 }
 @media (max-width:768px){
   .hero-left{
@@ -465,7 +490,11 @@ footer a:hover{
   .footer-logo img {
     width: 100%;
   }
-  .footercontent{
-    margin-top: 1rem;
+  #contacthead {
+    margin-top: 2rem;
+}
+  .contactDesc{
+    margin-top: 3rem;
+    font-size: 1.3rem;
   }
 }

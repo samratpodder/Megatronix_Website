@@ -299,3 +299,14 @@ function nextImage() {
   // slideshowImages[currentImageCounter].style.display = "block";
   slideshowImages[currentImageCounter].style.opacity = 1;
 }
+
+
+
+
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})

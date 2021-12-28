@@ -28,6 +28,10 @@ body{
     flex-direction: row;
     justify-content: space-between;
 }
+
+
+
+
 .navbar-links{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -70,5 +74,17 @@ body{
 @media (max-width:1320px){
     .links{
         padding-right: 2rem;
+    }
+}
+@media (max-width: 1000px) {
+    .logo{
+        height:50%;
+        width: 50%;
+    }
+    .links a {
+        font-size: 1rem;
+    }
+    .container-logo{
+        padding-left: 0rem;
     }
 }
