@@ -28,7 +28,9 @@ body{
     flex-direction: row;
     justify-content: space-between;
 }
-
+.toggleicon{
+    display: none;
+}
 
 
 
@@ -88,3 +90,29 @@ body{
         padding-left: 0rem;
     }
 }
+@media (max-width:576px){
+    .toggleicon{
+        font-size: 2.5rem;
+        display: block;
+    }
+    .navbar-links{
+        display: none;
+    }
+    .navactive{
+        display: flex;
+    }
+    /* .clicked{
+        color: #d10e0e67!important;
+    } */
+
+}
+@media (max-width:320px){
+    .toggleicon{
+      font-size: 1.5rem;
+  
+    }
+    .logo{
+      width: 39%;
+      height: auto;
+    }
+  }

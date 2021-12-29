@@ -2,7 +2,7 @@ const APIpath = "https://teamspageapi.azurewebsites.net/api/v1/isAlive";
 // Wake Up API
 axios.get(APIpath).then(
   (response)=>{
-    console.log("API is working");
+    console.log("API is working"+response);
   },
   (error) => {
       console.log(error);
@@ -301,12 +301,11 @@ function nextImage() {
 }
 
 
+var navbarLinks = document.querySelectorAll(".navbar-links")[0];
+// var toggler = document.querySelectorAll(".toggleicon")[0];
 
+function myToggler(){
+  navbarLinks.classList.toggle("navactive");
+  // toggler.classList.toggle("clicked");
+}
 
-
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
-})
