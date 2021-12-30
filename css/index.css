@@ -397,7 +397,7 @@ body {
     color: #ffffff;
     display: grid;
     grid-template-areas:
-        'footlogo left middle right'
+        'footlogo left socials'
     ;
     /* margin: 0% 5%; */
     margin: auto;
@@ -457,7 +457,7 @@ footer a:hover{
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 #socialHead{
   font-family: Gilroy-ExtraBold;
@@ -466,9 +466,27 @@ footer a:hover{
 }
 .footmid{
   margin-top: 2rem;
+  grid-area: socials;
 }
+.fb, .linked, .insta{
+  font-size: 2rem;
+}
+.fb:hover, .linked:hover, .insta:hover{
+  cursor: grab;
 
-
+}
+.fa-facebook:hover{
+  color: #3b5998;
+  transition: all 0.3s ease-in-out;
+}
+.fa-linkedin:hover{
+  color: #0077B5;
+  transition: all 0.3s ease-in-out;
+}
+.fa-instagram:hover{
+  color: #e1306c;
+  transition: all 0.3s ease-in-out;
+}
 @media (max-width:1600px){
   .hero-left{
     font-size: 4.5rem;
@@ -568,7 +586,7 @@ footer a:hover{
   .footcontainer{
     grid-template-areas:
     'footlogo left'
-    'middle right'
+    'socials socials'
     ;
   }
   #contacthead {
