@@ -553,7 +553,7 @@ footer a:hover{
     margin-left: 0rem;
   }
   #contacthead{
-    font-size: 1rem;
+    font-size: 2rem;
   }
   .aboutimg>img{
     width:180%;
@@ -568,6 +568,12 @@ footer a:hover{
   }
   .window{
     margin: 3% 5%;
+  }
+  #contactUs{
+    margin-left: -3rem;
+  }
+  .contactDesc{
+    font-size: 1.2rem;
   }
 }
 
@@ -736,17 +742,17 @@ footer a:hover{
   }
   .mobnav{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background: #202020;
     position: absolute;
-    top:0;
+    top:16vh;
     left: 0;
     z-index: 6;
     font-family: Gilroy-Light;
     transition: all 1s ease-in-out;
   }
   .mobnav-ul{
-    margin-top: 50%;
+    margin-top: 15%;
     /* margin-left: 30%; */
   }
   .mobnav-ul>li{
@@ -767,6 +773,18 @@ footer a:hover{
     text-decoration: none;
     color: white;
     text-align: center;
+  }
+  .footcontainer{
+    width: 90%;
+  }
+  .left{
+    margin-top: 3rem;
+  }
+  .contactDesc{
+    margin-top: 2rem;
+  }
+  footer{
+    margin-bottom: 5rem;
   }
 }
 
@@ -790,6 +808,9 @@ footer a:hover{
   .hero-right{
     margin-top: 5rem;
     margin-left: 3rem;
+  }
+  .mobnav{
+    height: 84vh;
   }
   .top,.end,.mid{
     font-size: 2rem;
