@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="overlay">
+        <div class="overlay" id="preloader">
             <svg class="pl" viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="pl-grad1" x1="1" y1="0.5" x2="0" y2="0.5">
@@ -33,9 +33,10 @@
             </svg>
         </div>
         <script type="text/javascript">
-            $(window).load(function(){
-            $('#overlay').fadeOut();
-            });
+            var preloader = document.getElementById('preloader');
+            setTimeout(function(){
+                preloader.style.opacity = 0;
+            }, 3500);
         </script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <div class="container-fluid">

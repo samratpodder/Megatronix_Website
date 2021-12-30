@@ -1,28 +1,31 @@
-* {
-	border: 0;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
+
 :root {
 	--hue: 223;
 	--bg: hsl(var(--hue),10%,90%);
 	--fg: hsl(var(--hue),10%,10%);
 	/* font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320)); */
 }
-body {
-	background: var(--bg);
-	color: var(--fg);
-	/* font: 1em/1.5 sans-serif; */
-	height: 100vh;
-	display: grid;
-	place-items: center;
-}
 
+.overlay{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg);
+  color: var(--fg);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  position: fixed;
+  left:0;
+}
+#preloader{
+  transition: all 0.3s ease-in-out;
+}
 .pl {
-	display: block;
-	width: 6.25em;
-	height: 6.25em;
+	width: 10%;
+	height: auto;
+
 }
 .pl__ring, .pl__ball {
 	animation: ring 2s ease-out infinite;
@@ -82,6 +85,9 @@ body {
 @font-face{
   font-family: Batman;
   src: url("../media/fonts/batmanforever.ttf");
+}
+.navbar{
+  z-index: 1;
 }
 .hero-section{
     display:flex;
