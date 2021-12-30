@@ -16,6 +16,28 @@
 </head>
 <body>
     <div class="container">
+        <div class="overlay">
+            <svg class="pl" viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="pl-grad1" x1="1" y1="0.5" x2="0" y2="0.5">
+                        <stop offset="0%" stop-color="hsl(313,90%,55%)" />
+                        <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                    </linearGradient>
+                    <linearGradient id="pl-grad2" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="hsl(313,90%,55%)" />
+                        <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                    </linearGradient>
+                </defs>
+                <circle class="pl__ring" cx="100" cy="100" r="82" fill="none" stroke="url(#pl-grad1)" stroke-width="36" stroke-dasharray="0 257 1 257" stroke-dashoffset="0.01" stroke-linecap="round" transform="rotate(-90,100,100)" />
+                <line class="pl__ball" stroke="url(#pl-grad2)" x1="100" y1="18" x2="100.01" y2="182" stroke-width="36" stroke-dasharray="1 165" stroke-linecap="round" />
+            </svg>
+        </div>
+        <script type="text/javascript">
+            $(window).load(function(){
+            $('#overlay').fadeOut();
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <div class="container-fluid">
              <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
                 <div class="container-logo navbar-brand">
@@ -81,7 +103,7 @@
             <div class="heading section-heading abouttext">
                 <span>About Us</span>
                 <p class="bodytext">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore error cupiditate eius officiis quaerat aspernatur quia tempora eum odit id cum dicta, dolore at temporibus beatae, aliquam recusandae minus incidunt harum blanditiis. Officia reprehenderit corrupti et totam voluptates ullam, assumenda vero! Repellat incidunt, voluptatibus dignissimos voluptatem impedit natus esse odit.
+                    Megatronix, the official technical club of Meghnad Saha Institute of Technology, aims to be a platform to cultivate ideas and to build them up in a way that they are not confined within a certain limit. Megatronix was founded in 2009 by a group of five students as a Robotics Club in the college. That group of five is now a team of fifty!
                 </p>
             </div>
         </div>
@@ -93,33 +115,25 @@
                       <li>
                         <div class="timeline-content">
                           <h3 class="date">20th may, 2010</h3>
-                          <img src="../media/Others/gallery3.jpg" alt="" srcset="">
-                          <h1>Heading 1</h1>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
+                          <img src="../media/Others/techxtra.jpg" alt="" srcset="">
+                          <h1>TECH-X-TREAM</h1>
+                          <p>The founder members, at that time in 2009, organized workshops on Manual Robotics followed by an intra-college fest which later came to be known as TECH-X-TRA. Since the year 2021 this fest has got its new name as TECH-X-TREAM which was the first online event held by Megatronix in the pandemic which turned out to be a great success!. This event is specially arranged for the 1st year students to participate in all technical as well as non-technical events organized by the club.</p>
                         </div>
                       </li>
                       <li>
                         <div class="timeline-content">
                           <h3 class="date">20th may, 2010</h3>
-                          <img src="../media/Others/gallery3.jpg" alt="" srcset="">
-                          <h1>Heading 2</h1>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
+                          <img src="../media/Others/paridhi.jpg" alt="" srcset="">
+                          <h1>PARIDHI</h1>
+                          <p>Megatronix is known to organize one of the best technical fests of Kolkata, PARIDHI the First Version of which was held on 17th and 18th March 2012. With an all total of 41 events, the Sixth Edition of the Three-Day Annual Inter-College Technical Festival, Paridhi 2017-18 set a whole new level in terms of success and popularity amongst students throughout the city and beyond. It is one of the biggest fest of Eastern India with participation from all across India. We’re soon looking forward to the 10th year of Paridhi with greater zeal and enthusiasm!</p>
                         </div>
                       </li>
                       <li>
                         <div class="timeline-content">
                           <h3 class="date">20th may, 2010</h3>
-                          <img src="../media/Others/gallery3.jpg" alt="" srcset="">
-                          <h1>Heading 3</h1>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="timeline-content">
-                          <h3 class="date">20th may, 2010</h3>
-                          <img src="../media/Others/gallery3.jpg" alt="" srcset="">
-                          <h1>Heading 4</h1>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur tempora ab laudantium voluptatibus aut eos placeat laborum, quibusdam exercitationem labore.</p>
+                          <img src="../media/Others/orientation.jpg" alt="" srcset="">
+                          <h1>ORIENTATION</h1>
+                          <p>Another event organized by the club is the ORIENTATION. It involves the display of innovative ideas and projects that are made by the members of the club themselves. This is organized to welcome the freshers into the world of technology so that they come across the various intriguing ideas of today’s technological world. Each innovative thought is portrayed into a successful project and Megatronix gives the students a chance for hands on experience about any particular idea.</p>
                         </div>
                       </li>
                     </ul>
@@ -177,33 +191,20 @@
                         </p>
                     </div>
                 </div>
-                <div class="mid">
-                    <div class="footheading">
-                        Hot Stuff
+                <div class="footmid">
+                    <div class="footheading" id="socialHead">
+                        Our Social Media
                     </div>
-                    <div class="footercontent ">
-                        <p>
-                            <a href="https://www.facebook.com/MegatronixMsit/">Facebook</a>
-                            <br>
-                            <a href="https://www.instagram.com/megatronixmsit/">Instagram</a>
-                            <br>
-                            <a href="https://www.linkedin.com/company/megatronixmsit/">Lorem ipsum dolor amet</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="footheading">
-                        Cool Stuff
-                    </div>
-                    <div class="footercontent ">
-                        <p>
-                            <a href="https://www.facebook.com/MegatronixMsit/"> Lorem ipsum dolor amet</a>
-                            <br>
-                            <a href="https://www.instagram.com/megatronixmsit/">Instagram</a>
-                            <br>
-                            <a href="https://www.linkedin.com/company/megatronixmsit/">LinkedIn</a>
-                        </p>
-                    </div>
+                    <div class="footercontent " id="allSocials">
+                        <div class="fb">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <div class="linked">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="insta">
+                            <i class="fab fa-instagram"></i>
+                        </div>
                     </div>
                 </div>
             </div>

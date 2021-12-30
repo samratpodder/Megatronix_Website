@@ -1,13 +1,94 @@
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),10%,90%);
+	--fg: hsl(var(--hue),10%,10%);
+	/* font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320)); */
+}
+body {
+	background: var(--bg);
+	color: var(--fg);
+	/* font: 1em/1.5 sans-serif; */
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.pl {
+	display: block;
+	width: 6.25em;
+	height: 6.25em;
+}
+.pl__ring, .pl__ball {
+	animation: ring 2s ease-out infinite;
+}
+.pl__ball {
+	animation-name: ball;
+}
+
+/* Dark theme  */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,10%);
+		--fg: hsl(var(--hue),10%,90%);
+	}
+}
+
+/* Animation */
+@keyframes ring {
+	from {
+		stroke-dasharray: 0 257 0 0 1 0 0 258;
+	}
+	25% {
+		stroke-dasharray: 0 0 0 0 257 0 258 0;
+	}
+	50%, to {
+		stroke-dasharray: 0 0 0 0 0 515 0 0;
+	}
+}
+@keyframes ball {
+	from, 50% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: 1;
+	}
+	64% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -109;
+	}
+	78% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -145;
+	}
+	92% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -157;
+	}
+	57%, 71%, 85%, 99%, to {
+		animation-timing-function: ease-out;
+		stroke-dashoffset: -163;
+	}
+}
+
+
 @font-face {
     font-family: Gilroy-ExtraBold;
     src: url("../media/fonts/Gilroy-ExtraBold.otf");
+}
+@font-face{
+  font-family: Batman;
+  src: url("../media/fonts/batmanforever.ttf");
 }
 .hero-section{
     display:flex;
     flex-direction:row;
     width: 100%;
     justify-content: space-around;
-    letter-spacing: 1rem;
+    letter-spacing: 0.8rem;
     height: 100%;
 }
 .hero-right
@@ -21,7 +102,7 @@
 {
     font-family: Gilroy-ExtraBold;
     color: aliceblue;
-    font-size: 5rem;
+    font-size: 4.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,9 +112,12 @@
 .desctext{
     font-family: Gilroy-Light;
     font-size: 1rem;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.6rem;
     margin-left: 9%;
     margin-top: -2%;
+}
+.top,.mid,.end,.toper,.ender{
+  font-family: Batman!important;
 }
 .mid{
     z-index: 5;
@@ -89,6 +173,7 @@
     margin-top: 2rem;
     font-family: Gilroy-Light;
     font-size: 1.2rem;
+    line-height: 2rem;
 }
 .timeline {
     width: 95%;
@@ -145,7 +230,7 @@
       left: 52.2%;
       transform: translateX(-50%);
       width: 3px;
-      height: 2000px;
+      height: 2500px;
       background-color: gray;
     }
     .timeline ul li {
@@ -367,8 +452,21 @@ footer a:hover{
   flex-direction: column;
   margin-top: 3rem;
 }
-
-
+#allSocials{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+}
+#socialHead{
+  font-family: Gilroy-ExtraBold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.footmid{
+  margin-top: 2rem;
+}
 
 
 @media (max-width:1600px){
@@ -380,7 +478,7 @@ footer a:hover{
     height:100%;
   }
   .desctext{
-    letter-spacing: 0.35rem;
+    letter-spacing: 0.45rem;
   }
   .aboutimg>img{
     width:200%;
@@ -423,6 +521,9 @@ footer a:hover{
 }
 
 @media (max-width:1100px){
+  .hero-left{
+    font-size: 2.5rem;
+  }
   .left{
     font-size: 1rem;
     margin-left: 0rem;
@@ -477,7 +578,7 @@ footer a:hover{
 }
 @media (max-width:768px){
   .hero-left{
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
   .hero-right>img{
     width:120%;
@@ -512,6 +613,17 @@ footer a:hover{
 
 @media (max-width:767px){}
 @media (max-width:512px){
+  .mobnav-li:hover , .mobnav-li:focus, .mobnav-li:active{
+    border-bottom:0.1rem  solid #ffffff;
+    transition: border-bottom 0.2s ease-in-out, border-right 0.4s ease-in-out, border-top 0.6s ease-in-out, border-left 0.8s ease-in-out;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    border-right: 0.1rem  solid #ffffff;
+    border-top: 0.1rem  solid #ffffff;
+    border-left: 0.1rem  solid #ffffff;
+    padding: 0.5rem;
+  }
   .hero-section{
     flex-direction: column-reverse;
   }
@@ -521,21 +633,22 @@ footer a:hover{
     margin: auto;
   }
   .hero-left{
-    font-size: 3rem;
+    font-size: 1rem;
     align-items: center;
-    /* margin-top: -1rem; */
+    margin-top: 1rem;
   }
-  .top,.end{
-    font-size: 4rem;
+  .top,.end,.mid{
+    font-size: 3rem;
   }
-  .top{
+  /* .top{
     margin-left: -1.2rem;
   }
   .end{
     margin-right: -2.2rem;
-  }
+  } */
   .desctext{
     margin-left: -1rem;
+    font-size: 1.5rem;
   }
   .toper,.ender{
     display: none;
@@ -544,7 +657,10 @@ footer a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
   .aboutimg>img{
     width:100%;
@@ -560,11 +676,17 @@ footer a:hover{
     text-align: center;
     max-width: 100%;
   }
+  ol,ul{
+    padding-left: 0rem;
+  }
   .section-heading>span{
     margin-top: -2rem;
   }
+  #events{
+    margin-top: 12rem;
+  }
   #events>.heading>span{
-    margin-left: 10rem;
+    margin-left: 11.5rem;
     margin-bottom: -5rem;
   }
   .timeline{
@@ -624,21 +746,42 @@ footer a:hover{
   }
 }
 
+/* Iphone 6/7/8 Config + General Android */
+@media(max-width:375px) {
+  /* .hero-left{
+    padding-left: 1rem;
+  } */
+  .top,.end,.mid{
+    font-size: 2.7rem;
+  }
+  .timeline{
+    padding-left: 0.5rem;
+  }
+  #events>.heading>span {
+    margin-left: 10rem;
+  }
+}
 /* Iphone 5/SE Only Config */
 @media (max-width:320px){
   .hero-right{
     margin-top: 5rem;
     margin-left: 3rem;
   }
-  .top{
-    margin-left: 2rem;
+  .top,.end,.mid{
+    font-size: 2rem;
+  }
+  .desctext{
+    font-size: 1rem;
+  }
+  /* .top{
+    margin-left: 1rem;
   }
   .mid,.desctext{
     margin-left: 2.5rem;
   }
   .end{
     margin-right: -2rem;
-  }
+  } */
   .aboutus{
     margin-top: 12rem;
     margin-left: 1rem;

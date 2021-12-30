@@ -14,27 +14,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="../css/footer.css">
+    <!-- <link rel="stylesheet" href="../css/footer.css"> -->
+    <link rel="stylesheet" href="./index.html">
     <link rel="shortcut icon" href="../media/logos/mega_logo.ico" type="image/x-icon">
     <title>Megatronix Team</title>
 </head>
 <body>
     <div class="body-container">
+        <div id="overlay">
+            <svg class="pl" viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="pl-grad1" x1="1" y1="0.5" x2="0" y2="0.5">
+                        <stop offset="0%" stop-color="hsl(313,90%,55%)" />
+                        <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                    </linearGradient>
+                    <linearGradient id="pl-grad2" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="hsl(313,90%,55%)" />
+                        <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                    </linearGradient>
+                </defs>
+                <circle class="pl__ring" cx="100" cy="100" r="82" fill="none" stroke="url(#pl-grad1)" stroke-width="36" stroke-dasharray="0 257 1 257" stroke-dashoffset="0.01" stroke-linecap="round" transform="rotate(-90,100,100)" />
+                <line class="pl__ball" stroke="url(#pl-grad2)" x1="100" y1="18" x2="100.01" y2="182" stroke-width="36" stroke-dasharray="1 165" stroke-linecap="round" />
+            </svg>
+        </div>
+        <script type="text/javascript">
+            $(window).load(function(){
+            $('#overlay').fadeOut();
+            });
+        </script>
         <div class="container-fluid">
-            <nav class="navbar sticky-top navbar-dark">
+            <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
                <div class="container-logo navbar-brand">
                    <a href="../html/index.html">
                        <img src="../media/logos/megalogowithstroke.png" alt="logo" class="logo">
                    </a>
                </div>
+
                <div class="navbar-nav  navbar-links">
-                   <div class="home links"><li>    <a href="./index.html">Home    </a></li></div>
-                   <div class="events links"><li>  <a href="./index.html#aboutUs">About Us  </a></li></div>
-                   <div class="team links"><li>    <a href="#">Team    </a></li></div>
-                   <div class="timeline links"><li><a href="./index.html#events">Events</a></li></div>
-                   <div class="faq links"><li>     <a href="./index.html#contactUs">Contact Us    </a></li></div>
+                   <div class="home links "><li>   <a href="index.html">Home    </a>           </li></div>
+                   <div class="events links"><li>  <a href="index.html#aboutUs">About Us  </a>  </li></div>
+                   <div class="team links"><li>    <a href="#">Team    </a>   </li></div>
+                   <div class="timel links"><li>   <a href="index.html#events">Events</a>       </li></div>
+                   <div class="faq links"><li>     <a href="index.html#contactUs">Contact Us</a></li></div>
                </div>
+
+               <a href="javascript:void(0);" class="toggleicon" onclick="myToggler()">
+                   <i class="fa fa-bars" style="color: aliceblue;"></i>
+                 </a>
            </nav> 
+           <div class="mobnav d-none">
+               <ul class="mobnav-ul">
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="#">Home    </a>            </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="#aboutUs">About Us  </a>   </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="card.html">Team    </a>    </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="#events">Events</a>        </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="#contactUs">Contact Us</a> </li>
+               </ul>
+           </div>
        </div>
        <div class="heading">
            Our Team
