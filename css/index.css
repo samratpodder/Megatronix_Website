@@ -1,7 +1,7 @@
 
 :root {
 	--hue: 223;
-	--bg: hsl(var(--hue),10%,90%);
+	--bg: rgb(20,20,20);
 	--fg: hsl(var(--hue),10%,10%);
 	/* font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320)); */
 }
