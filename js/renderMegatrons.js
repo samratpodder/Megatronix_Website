@@ -154,53 +154,62 @@ const makeGetRequest = (path)=> {
 var megatronlist=[];
 makeGetRequest("https://teamspageapi.azurewebsites.net/api/v1/getDir");
 setTimeout(() => {
-
-
-
-    // console.log(apiData);
-
-
-
-    for (let i = 0; i < apiData.length; i++) {
-        const element = apiData[i];
-        megatronlist.push(new Megatron(element.Name,
-            element.Facebook_url,element.Github_url,element.Email_ID,element.LinkedIn_url,
-            element.Image,element.Phone_Number,element.Department,element.Year
-        ));
-
-    }
+if (apiData==undefined) {
+    window.location.href = "./card.html";
     
-    megatronlist.sort(sortbyName);
-    megatronlist.sort(sortbyYear);
+} else {
 
-    for (let index = 0; index < megatronlist.length; index++) {
-        const element = megatronlist[ index ];
-        const Mainname = element.getName();
-        const imgSrc = element.getPicSrc();
-        const socials = element.getSocialSM();
-        const specialText = element.getDept();
-        // if()
-        const card = document.createElement("div");
-        card.classList = "card";
-        const megatron = '\
-        <div class="card-image">\
-            <img src="'+imgSrc+'" alt="">\
-        </div>\
-        <div class="card-content">\
-            <h5 class="name">'+Mainname+'</h5>\
-            <h4 class="spltxt">  '+specialText+' </h4>\
-            <div class="socials">\
-                <ul class="social">\
-                    <li><a href="'+socials.email+'" class="fa fa-envelope "></a></li>\
-                    <li><a href="'+socials.ph+'" class="fa fa-phone"></a></li>\
-                </ul>\
+    setTimeout(() => {
+
+
+
+        // console.log(apiData);
+    
+    
+    
+        for (let i = 0; i < apiData.length; i++) {
+            const element = apiData[i];
+            megatronlist.push(new Megatron(element.Name,
+                element.Facebook_url,element.Github_url,element.Email_ID,element.LinkedIn_url,
+                element.Image,element.Phone_Number,element.Department,element.Year
+            ));
+    
+        }
+        
+        megatronlist.sort(sortbyName);
+        megatronlist.sort(sortbyYear);
+    
+        for (let index = 0; index < megatronlist.length; index++) {
+            const element = megatronlist[ index ];
+            const Mainname = element.getName();
+            const imgSrc = element.getPicSrc();
+            const socials = element.getSocialSM();
+            const specialText = element.getDept();
+            // if()
+            const card = document.createElement("div");
+            card.classList = "card";
+            const megatron = '\
+            <div class="card-image">\
+                <img src="'+imgSrc+'" alt="">\
             </div>\
-        </div>\
-        ';
-        card.innerHTML += megatron;
-        document.querySelector(".cards").appendChild(card);
-    }
-
-
+            <div class="card-content">\
+                <h5 class="name">'+Mainname+'</h5>\
+                <h4 class="spltxt">  '+specialText+' </h4>\
+                <div class="socials">\
+                    <ul class="social">\
+                        <li><a href="'+socials.email+'" class="fa fa-envelope "></a></li>\
+                        <li><a href="'+socials.ph+'" class="fa fa-phone"></a></li>\
+                    </ul>\
+                </div>\
+            </div>\
+            ';
+            card.innerHTML += megatron;
+            document.querySelector(".cards").appendChild(card);
+        }
+    
+    
+    
+    },1500);
+}
 
 },2000);
