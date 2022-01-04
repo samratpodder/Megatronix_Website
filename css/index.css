@@ -643,6 +643,12 @@ footer a:hover{
 
 @media (max-width:767px){}
 @media (max-width:512px){
+  .toggleicon{
+    font-size: 2.5rem;
+  }
+  .mobnav-li{
+    font-size: 2.5rem!important;
+  }
   .mobnav-li:hover , .mobnav-li:focus, .mobnav-li:active{
     border-bottom:0.1rem  solid #ffffff;
     transition: border-bottom 0.2s ease-in-out, border-right 0.4s ease-in-out, border-top 0.6s ease-in-out, border-left 0.8s ease-in-out;
@@ -661,6 +667,7 @@ footer a:hover{
     align-items: center;
     width: 80%;
     margin: auto;
+    margin-top: 4rem;
   }
   .hero-left{
     font-size: 1rem;
@@ -802,9 +809,16 @@ footer a:hover{
   #events>.heading>span {
     margin-left: 10rem;
   }
+  .mobnav{
+    height: 90vh;
+    top:16.5vh;
+  }
 }
 /* Iphone 5/SE Only Config */
 @media (max-width:320px){
+  .toggleicon{
+    font-size: 1.9rem;
+  }
   .hero-right{
     margin-top: 5rem;
     margin-left: 3rem;
