@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/contact.css">
+
+    <link rel="shortcut icon" href="../media/logos/mega_logo.ico" type="image/x-icon">
+    <title>Contact Megatronix</title>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay" id="preloader">
+            <svg class="pl" viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="pl-grad1" x1="1" y1="0.5" x2="0" y2="0.5">
+                        <stop offset="0%" stop-color="hsl(313,90%,55%)" />
+                        <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                    </linearGradient>
+                    <linearGradient id="pl-grad2" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="hsl(313,90%,55%)" />
+                        <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                    </linearGradient>
+                </defs>
+                <circle class="pl__ring" cx="100" cy="100" r="82" fill="none" stroke="url(#pl-grad1)" stroke-width="36" stroke-dasharray="0 257 1 257" stroke-dashoffset="0.01" stroke-linecap="round" transform="rotate(-90,100,100)" />
+                <line class="pl__ball" stroke="url(#pl-grad2)" x1="100" y1="18" x2="100.01" y2="182" stroke-width="36" stroke-dasharray="1 165" stroke-linecap="round" />
+            </svg>
+        </div>
+        <script type="text/javascript">
+            var preloader = document.getElementById('preloader');
+            setTimeout(function(){
+                preloader.style.opacity = 0;
+            }, 1100);
+            setTimeout(function(){
+                preloader.style.display = 'none';
+            }, 1200);
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
+               <div class="container-logo navbar-brand">
+                   <a href="#">
+                       <img src="../media/logos/megalogowithstroke.png" alt="logo" class="logo">
+                   </a>
+               </div>
+
+               <div class="navbar-nav  navbar-links">
+                   <div class="home links "><li>   <a href="#">Home    </a>           </li></div>
+                   <div class="events links"><li>  <a href="#aboutUs">About Us  </a>  </li></div>
+                   <div class="team links"><li>    <a href="./html/team.html">Team    </a>   </li></div>
+                   <div class="timel links"><li>   <a href="#events">Events</a>       </li></div>
+                   <div class="faq links"><li>     <a href="#contactUs">Contact Us</a></li></div>
+               </div>
+
+               <a href="javascript:void(0);" class="toggleicon" onclick="myToggler()">
+                   <i class="fa fa-bars" style="color: aliceblue;"></i>
+                 </a>
+           </nav> 
+           <div class="mobnav d-none">
+               <ul class="mobnav-ul">
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="#">Home    </a>            </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="#aboutUs">About Us  </a>   </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="./html/team.html">Team    </a>    </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="#events">Events</a>        </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="#contactUs">Contact Us</a> </li>
+               </ul>
+           </div>
+       </div>
+        <div class="mapcontainer">
+            <iframe width="100%" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFQzKS_FzAjoR0K9eqpv1Hr0&key=AIzaSyCWowwfcKJZzKrc-1jLRLbMpWYe4nsI1rQ"></iframe>
+        </div>
+        <div class="contact">
+            <div class="ourdetails">
+
+            </div>
+            <div class="forms">
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/contact.js"></script>
+</body>
+</html>
