@@ -250,7 +250,7 @@ body{
 .name{
     font-family: Gilroy-ExtraBold;
 }
-.heading{
+.heading, .yearhead{
     text-align: center;
     color: #d0d0d0;
     font-size: 2.5rem;
@@ -258,8 +258,17 @@ body{
     margin:2rem 0rem;
 
 }
+.yearhead{
+    font-family: Gilroy-Light;
+}
+.pref{
+    margin-top: 36rem;
+}
 @media (max-width:1100px)
 {
+    .pref{
+        margin-top:3rem;
+    }
     .cards{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(25%,100%), 1fr));
@@ -422,6 +431,12 @@ body{
 {
     .cards{
         grid-gap: 1% 5%;
+    }
+    .pref{
+        margin-top: 54rem;
+    }
+    .cardsjr{
+        margin-top: 5rem;
     }
     .card{
         width: 100%;

@@ -178,8 +178,8 @@ if (apiData==undefined) {
         
         megatronlist.sort(sortbyName);
         megatronlist.sort(sortbyYear);
-    
-        for (let index = 0; index < megatronlist.length; index++) {
+        var index;
+        for (index = 0; index < megatronlist.length && megatronlist[index].year==4; index++) {
             const element = megatronlist[ index ];
             const Mainname = element.getName();
             const imgSrc = element.getPicSrc();
@@ -206,7 +206,39 @@ if (apiData==undefined) {
             card.innerHTML += megatron;
             document.querySelector(".cards").appendChild(card);
         }
-    
+    //     var divider = `
+    //     <br>
+    //     <div class="yearhead">
+    //         Pre-Final Year Members
+    //    </div><br>`;
+    //     document.querySelector(".cards").innerHTML += divider;
+        for (; index < megatronlist.length; index++) {
+            const element = megatronlist[ index ];
+            const Mainname = element.getName();
+            const imgSrc = element.getPicSrc();
+            const socials = element.getSocialSM();
+            const specialText = element.getDept();
+            // if()
+            const card = document.createElement("div");
+            card.classList = "card";
+            const megatron = '\
+            <div class="card-image">\
+                <img src="'+imgSrc+'" alt="">\
+            </div>\
+            <div class="card-content">\
+                <h5 class="name">'+Mainname+'</h5>\
+                <h4 class="spltxt">  '+specialText+' </h4>\
+                <div class="socials">\
+                    <ul class="social">\
+                        <li><a href="'+socials.email+'" class="fa fa-envelope "></a></li>\
+                        <li><a href="'+socials.ph+'" class="fa fa-phone"></a></li>\
+                    </ul>\
+                </div>\
+            </div>\
+            ';
+            card.innerHTML += megatron;
+            document.querySelector(".cardsjr").appendChild(card);
+        }
     
     
     },1500);
