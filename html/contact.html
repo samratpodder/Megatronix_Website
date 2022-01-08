@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/contact.css">
-
+    <script src="https://kit.fontawesome.com/528f5885b7.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../media/logos/mega_logo.ico" type="image/x-icon">
     <title>Contact Megatronix</title>
 </head>
@@ -39,7 +39,7 @@
             }, 1200);
         </script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <div class="container-fluid">
+        <div class="container-fluid navcont">
             <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
                <div class="container-logo navbar-brand">
                    <a href="#">
@@ -61,23 +61,42 @@
            </nav> 
            <div class="mobnav d-none">
                <ul class="mobnav-ul">
-                   <li class="mobnav-li"> <a onclick="myToggler()" href="#">Home    </a>            </li>
-                   <li class="mobnav-li"> <a onclick="myToggler()" href="#aboutUs">About Us  </a>   </li>
-                   <li class="mobnav-li"> <a onclick="myToggler()" href="./html/team.html">Team    </a>    </li>
-                   <li class="mobnav-li"> <a onclick="myToggler()" href="#events">Events</a>        </li>
-                   <li class="mobnav-li"> <a onclick="myToggler()" href="#contactUs">Contact Us</a> </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="../index.html">Home    </a>            </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="../index.html#aboutUs">About Us  </a>   </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="./team.html">Team    </a>    </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="../index.html#events">Events</a>        </li>
+                   <li class="mobnav-li"> <a onclick="myToggler()" href="contact.html">Contact Us</a> </li>
                </ul>
            </div>
        </div>
         <div class="mapcontainer">
-            <iframe width="100%" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFQzKS_FzAjoR0K9eqpv1Hr0&key=AIzaSyCWowwfcKJZzKrc-1jLRLbMpWYe4nsI1rQ"></iframe>
+            <iframe style="filter: invert(90%)" width="100%" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJFQzKS_FzAjoR0K9eqpv1Hr0&key=AIzaSyCWowwfcKJZzKrc-1jLRLbMpWYe4nsI1rQ"></iframe>
         </div>
         <div class="contact">
             <div class="ourdetails">
-
+                <!-- <h3 class="lhead">Reach Us!</h3> -->
+                <div class="email">
+                    <span><i class="far fa-envelope"></i>Email: <a href="mailto:admin@megatronixmsit.in"> admin@megatronixmsit.in</a></span>
+                </div>
+                <div class="phone">
+                    <span><i class="fas fa-phone-alt"></i>Phone Number:<a href="tel:9888888888"> +91-9888888888</a> </span>
+                    
+                </div>
+                <div class="location">
+                    <span><i class="fas fa-map-marker-alt"></i>Kolkata, India</span>
+                    
+                </div>
             </div>
+            <hr class="diver">
             <div class="forms">
-
+                <h3 class="fhead">Leave a Message!</h3>
+                <form id="form" class="topBefore">
+		
+                    <input id="name" type="text" placeholder="NAME">
+                    <input id="email" type="text" placeholder="E-MAIL">
+                    <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+                    <input id="submit" type="submit" value="GO!">
+                </form>
             </div>
         </div>
     </div>
