@@ -220,8 +220,34 @@ body{
     max-width: 150%;
     width: 120%;
     justify-content: center;
+    
 }
-.social li a{
+.email,.phone{
+    font-size: 1.5rem;
+    width: 4rem;
+    margin-bottom: 0.6rem;
+}
+.email{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.phone{
+    color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.email a, .phone a{
+    text-decoration: none;
+    text-emphasis: none;
+}
+.email a:hover, .phone a:hover{
+    color: #33d1e9;
+    transition: all 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+/* .social li a{
     text-decoration: none;
 }
 .social li{
@@ -229,12 +255,12 @@ body{
    padding-right: 120%;
    /* margin-right: 50%; */
    /* min-width: 27%; */
-}
+/* } */
 .social :hover li>a{
     border-radius: 20%;
     border-color: #000;
     border: rgb(89, 230, 8) solid 1px;
-}
+} */
 .fa-facebook{
     color: #2051bb;
 }
@@ -354,8 +380,8 @@ body{
     .name{
         font-size: 1rem;
     }
-    .social a{
-        transform: scale(1.5,1.5);
+    .email, .phone{
+        transform: scale(1.1,1.1);
         /* display: none; */
         opacity: 0;
         transition: all 0.7s ease-in-out;
@@ -372,7 +398,7 @@ body{
     .card:hover .card-image img{
         transform: none;
     }
-    .card:hover .social a, .card:hover .spltxt{
+    .card:hover .email,.card:hover .phone, .card:hover .spltxt{
         /* display: block; */
 
         opacity: 1;
@@ -425,7 +451,9 @@ body{
         color: white;
         text-align: center;
     }
-
+    .email, .phone{
+        font-size: 1.1rem;
+    }
 }
 @media (max-width:375px)
 {
