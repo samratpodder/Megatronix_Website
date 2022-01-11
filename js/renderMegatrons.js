@@ -196,10 +196,12 @@ if (apiData==undefined) {
                 <h5 class="name">'+Mainname+'</h5>\
                 <h4 class="spltxt">  '+specialText+' </h4>\
                 <div class="socials">\
-                    <ul class="social">\
-                        <li><a href="'+socials.email+'" class="fa fa-envelope "></a></li>\
-                        <li><a href="'+socials.ph+'" class="fa fa-phone"></a></li>\
-                    </ul>\
+                    <div class="email">\
+                        <a href="'+socials.email+'" class="fa fa-envelope "></a>\
+                    </div>\
+                    <div class="phone">\
+                        <a href="'+socials.ph+'" class="fa fa-phone "></a>\
+                    </div>\
                 </div>\
             </div>\
             ';
@@ -229,10 +231,12 @@ if (apiData==undefined) {
                 <h5 class="name">'+Mainname+'</h5>\
                 <h4 class="spltxt">  '+specialText+' </h4>\
                 <div class="socials">\
-                    <ul class="social">\
-                        <li><a href="'+socials.email+'" class="fa fa-envelope "></a></li>\
-                        <li><a href="'+socials.ph+'" class="fa fa-phone"></a></li>\
-                    </ul>\
+                    <div class="email">\
+                        <a href="'+socials.email+'" class="fa fa-envelope "></a>\
+                    </div>\
+                    <div class="phone">\
+                        <a href="'+socials.ph+'" class="fa fa-phone "></a>\
+                    </div>\
                 </div>\
             </div>\
             ';
