@@ -144,7 +144,7 @@
   animation: animate 3s linear 3;
   -webkit-background-clip: text;
   /* -webkit-text-fill-color: rgba(255, 255, 255, 0); */
-} */
+/* }  */
 @keyframes animate {
   0% {
     background-position: -500%;
@@ -153,18 +153,27 @@
     background-position: 500%;
   }
 }
-@-webkit-keyframes typing { from { width: 0; } }
-@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+@keyframes typing { from { width: 0; } }
+@keyframes blink-caret { 50% { border-color: transparent; } }
+@keyframes wideoutin {
+  0%{
+    letter-spacing: inherit;
+  }
+  30%{
+    letter-spacing: 0.5rem;
+  }
+  50%{
+    letter-spacing: 1rem;
+  }
+  75%{
+    letter-spacing: 0.5rem;
+  }
+  100%{
+    letter-spacing: inherit;
+  }
+}
 .mid{
-  /* font: bold 2em monospace; */
-  color: white;
-	border-right: .1em solid black;
-	/* width: calc(0.55em * 14);  */
-	/* width: 14ch; */
-	white-space: nowrap;
-	overflow: hidden;
-	-webkit-animation: typing 3s steps(10 end),
-	           blink-caret .5s step-end infinite alternate;
+  animation: wideoutin 5s linear 1;
 }
 #midtxt{
   margin-top: 0.3rem;

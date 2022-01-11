@@ -27,6 +27,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0;
 }
 .toggleicon{
     display: none;
@@ -50,7 +51,7 @@ body{
     border-top: 0.1rem  solid #ffffff;
     border-left: 0.1rem  solid #ffffff; */
     /* transition: padding 0.5s ease-in-out; */
-    transition: border-bottom 0.5s ease-in-out, border-right 0.5s ease-in-out, border-top 0.65s ease-in-out, border-left 1s ease-in-out;
+    transition: border-bottom 1s ease-in-out, border-right 0.5s ease-in-out, border-top 0.65s ease-in-out, border-left 1s ease-in-out;
     
 }
 .links a{
@@ -58,12 +59,12 @@ body{
     color: azure;
     font-size: 1.5rem;
     font-family: Gilroy-Light;
-    padding: 0.5rem 0.3rem;
+    /* padding: 0.5rem 0.3rem; */
 }
 .container-logo{
     padding-left: 5rem;
 }
-.links{
+.links a{
     transition: all 0.5s ease-in-out;
 }
 .links:hover{
