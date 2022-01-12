@@ -172,9 +172,9 @@
     letter-spacing: inherit;
   }
 }
-.mid{
+/* .mid{
   animation: wideoutin 5s linear 1;
-}
+} */
 #midtxt{
   margin-top: 0.3rem;
 }

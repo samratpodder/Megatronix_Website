@@ -42,7 +42,7 @@ body{
 }
 .links{
     padding-right: 3rem;
-    
+    text-align: center;
 }
 .links a:hover,.links a:active,.links a:focus{
     /* padding: 0.1rem 0.6rem; */
@@ -51,8 +51,8 @@ body{
     border-top: 0.1rem  solid #ffffff;
     border-left: 0.1rem  solid #ffffff; */
     /* transition: padding 0.5s ease-in-out; */
-    transition: border-bottom 1s ease-in-out, border-right 0.5s ease-in-out, border-top 0.65s ease-in-out, border-left 1s ease-in-out;
-    
+    /* transition: border-bottom 1s ease-in-out, border-right 0.5s ease-in-out, border-top 0.65s ease-in-out, border-left 1s ease-in-out; */
+    transition: border-bottom 1s ease-in-out;
 }
 .links a{
     text-decoration: none;
@@ -70,6 +70,8 @@ body{
 .links:hover{
     /* transform: translateX(0.5rem);
     transform: translateY(0.3rem); */
+    /* border-bottom:0.1rem  solid #ffffff; */
+    transition: border-bottom 1s ease-in-out;
 }
 
 
