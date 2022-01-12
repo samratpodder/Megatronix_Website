@@ -80,7 +80,7 @@
                     <span><i class="far fa-envelope"></i>Email: <a href="mailto:admin@megatronixmsit.in"> admin@megatronixmsit.in</a></span>
                 </div>
                 <div class="phone">
-                    <span><i class="fas fa-phone-alt"></i>Phone Number:<a href="tel:9888888888"> +91-9888888888</a> </span>
+                    <span><i class="fas fa-phone-alt"></i>Phone Number:<a href="tel:9888888888"> +91-9051522149</a> </span>
                     
                 </div>
                 <div class="location">
@@ -91,12 +91,13 @@
             <hr class="diver">
             <div class="forms">
                 <h3 class="fhead">Leave a Message!</h3>
-                <form id="form" class="topBefore">
-		
-                    <input id="name" type="text" placeholder="NAME">
-                    <input id="email" type="text" placeholder="E-MAIL">
-                    <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-                    <input id="submit" type="submit" value="GO!">
+                <form id="form" action="../php/submit.php" method="POST" class="topBefore" name="myform"  onsubmit="return validateForm()">
+                    <input id="name" name="name" type="text" placeholder="NAME" required>
+                    <input id="email" name="email" type="email" placeholder="E-MAIL" required>
+                    <input id="phone" name="phone" type="text" placeholder="PHONE" required>
+                    <input id="topic" name="topic" type="text" placeholder="TOPIC">
+                    <textarea id="message" name="message" type="text" placeholder="MESSAGE" required></textarea>
+                    <input id="submit" type="submit" value="Submit">
                 </form>
             </div>
         </div>
