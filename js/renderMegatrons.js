@@ -155,7 +155,7 @@ var megatronlist=[];
 makeGetRequest("https://teamspageapi.azurewebsites.net/api/v1/getDir");
 setTimeout(() => {
 if (apiData==undefined) {
-    window.location.href = "./card.html";
+    window.location.href = "./team.html";
     
 } else {
 
